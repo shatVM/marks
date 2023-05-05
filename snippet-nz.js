@@ -4,6 +4,7 @@ let flag = 1; //Перемикач для додавання кнопок 0 аб
 
 console.clear();
 
+//Додаємо кнопки в журнал оцінок в Нові знання
 if (flag == 1) addButtons();
 
 function addButtons(){
