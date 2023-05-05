@@ -1,10 +1,10 @@
-let flag = 1; //Перемикач для додавання кнопок 0 або 1
+//
 
-//Додаємо кнопки для вставки оцінок в НЗ
+let flag = 1; //Перемикач для додавання кнопок 0 або 1
 
 console.clear();
 
-//Додаємо кнопки в Оцінки Classroom
+//Додаємо кнопки в журнал оцінок в Classroom
 setTimeout(function () {
   console.clear();
   if (flag == 1) addClassroomButton();
