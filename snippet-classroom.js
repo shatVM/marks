@@ -1,6 +1,7 @@
 //
 
 let flag = 1; //Перемикач для додавання кнопок 0 або 1
+let pauseTime = 10000;
 
 console.clear();
 
@@ -8,7 +9,7 @@ console.clear();
 setTimeout(function () {
   console.clear();
   if (flag == 1) addClassroomButton();
-}, 10000);
+}, pauseTime);
 
 function addClassroomButton() {
   // Знайти всі елементи з класом .RUkyfb
