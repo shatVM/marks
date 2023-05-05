@@ -1,5 +1,6 @@
 # marks
-Importr marks from Google Classrom to NZ.UA
+Import marks from Google Classrom to NZ.UA
+
 Просте перенесення оцінок з журналу Google Classrom в журнал Нові знання nz.ua
 
 За основу взято сніпети з сайту https://teacher-typ.blogspot.com/2023/03/google-nzua.html - Імпорт оцінок з Google-класу до електронного журналу NZ.UA 
@@ -11,4 +12,6 @@ Importr marks from Google Classrom to NZ.UA
  
  Рекомендовано встановити розширення Custom JavaScript for Websites 2 https://chrome.google.com/webstore/detail/custom-javascript-for-web/ddbjnfjiigjmcpcpkmhogomapikjbjdk для автоматичного запуску даних сніпетів
  
- Відео по налаштуванню ---
+ Відео по налаштуванню --- (буде додане пізніше)
+
+ 
