@@ -1,5 +1,5 @@
 # marks
-Tranport marks from Google Classrom to NZ.UA
+Importr marks from Google Classrom to NZ.UA
 Просте перенесення оцінок з журналу Google Classrom в журнал Нові знання nz.ua
 
 За основу взято сніпети з сайту https://teacher-typ.blogspot.com/2023/03/google-nzua.html - Імпорт оцінок з Google-класу до електронного журналу NZ.UA 
