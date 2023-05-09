@@ -1,8 +1,8 @@
 # marks
-Import marks from Google Classrom to NZ.UA
+Import marks from Google Classroom to NZ.UA
 https://t.me/classroom_nz
 
-Просте перенесення оцінок з журналу Google Classrom в журнал Нові знання nz.ua
+Просте перенесення оцінок з журналу Google Classroom в журнал Нові знання nz.ua
 
 💾 Файли для роботи https://github.com/shatVM/marks
 
