@@ -1,4 +1,3 @@
-//
 
 let flag = 1; //Перемикач для додавання кнопок 0 або 1
 let pauseTime = 10000;
@@ -14,18 +13,14 @@ setTimeout(function () {
 function addClassroomButton() {
   // Знайти всі елементи з класом .RUkyfb
   var elements = document.querySelectorAll(".RUkyfb");
-
   // Пройтися по кожному елементу та додати кнопку
   elements.forEach(function (element) {
     // Створити кнопку
     var button = document.createElement("button");
     button.textContent = Array.from(elements).indexOf(element) + 1;
-
     // Додати обробник події для кнопки
     button.addEventListener("click", function () {
       // Обробник події
-      //console.log("Button clicked!");
-
       console.clear();
       let oznum = parseInt(this.textContent),
         table = document.getElementsByTagName("table"),
@@ -38,6 +33,7 @@ function addClassroomButton() {
         if (void 0 !== rows[t]) {
           let o = rows[t].children,
             i = o[0].innerText;
+          i = i.split(" ", 2)[1] + " " + i.split(" ", 2)[0];
           (ozinki = ozinki + i + ": "), (sdata[i] = []);
           for (let n = 1; n < o.length - 1; n++) {
             let t = o[n].innerText.split("\n");
@@ -53,17 +49,43 @@ function addClassroomButton() {
       }
       navigator.clipboard.writeText(JSON.stringify(sdata)).then(
         function () {
+          showModal("Оцінки скопійовано");
           console.log(
             "Успішно скопійовано у буфер обміну: " + JSON.stringify(sdata)
           );
         },
         function () {
+          showModal("Не вдалося скопіювати текст у буфер обміну");
           console.error("Не вдалося скопіювати текст у буфер обміну");
         }
       );
-    });
-
-    // Додати кнопку до елементу
+    });   
     element.append(button);
   });
+}
+
+function showModal(text) {
+  var overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = "10px";
+  overlay.style.left = "10px";
+  overlay.style.width = "250px";
+  overlay.style.height = "100px";
+  overlay.style.backgroundColor = "rgba(0, 155, 20, 0.7)";
+  overlay.style.textAlign = "center";
+  overlay.style.paddingTop = "70px";
+  overlay.style.borderRadius = "10px";
+  overlay.style.zIndex = "9999";
+  overlay.style.display = "none";
+  var messageText = document.createElement("p");
+  messageText.textContent = text;
+  messageText.style.fontWeight = "bold";
+  messageText.style.fontSize = "20px";
+  messageText.style.color = "white";
+  overlay.appendChild(messageText);
+  document.body.appendChild(overlay);
+  overlay.style.display = "block";
+  setTimeout(function () {
+    overlay.style.display = "none";
+  }, 1500);
 }
