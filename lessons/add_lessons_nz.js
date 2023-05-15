@@ -1,6 +1,4 @@
 //https://nz.ua/journal/add-edit-lesson?journal=2683125
-let group = "2683125"
-
 let data =[ {
   date: "2023-05-31",
   buzzer: "1",
@@ -27,10 +25,10 @@ let data =[ {
 ]
 
 console.clear()
-data.forEach((e) =>clickAddButton(group,e))
+data.forEach((e) =>clickAddButton(e))
 
 
-function clickAddButton(group,data) {
+function clickAddButton(data) {
   // Отримуємо елемент посилання за допомогою селектора або інших методів
   //const link = document.querySelector(
   //  'a[href="/journal/add-edit-lesson?journal='+ group +'"]'
