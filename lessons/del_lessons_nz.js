@@ -13,8 +13,8 @@ setTimeout(function () {
     const buttons = document.querySelectorAll("button");
 
     buttons[4].click();
-  }, 1000);
-}, 1000);
+  }, 500);
+}, 500);
 
 
 

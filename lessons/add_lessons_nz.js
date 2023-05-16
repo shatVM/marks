@@ -1,7 +1,44 @@
-let data = [];
-
+//let dataFromClipboard = [];
 console.clear();
-data.forEach((e) => clickAddButton(e));
+//[START] Отримання даних з буферу обміну
+navigator.clipboard.readText()
+  .then(text => {
+    //console.log(text); // Дані у форматі об'єкту JavaScript
+
+    const lines = text.split('\n');
+    const headers = lines[0].split('\t');
+    const data = [];
+    
+    for (let i = 1; i < lines.length; i++) {
+      const row = lines[i].split('\t');
+      const rowData = {};
+    
+      for (let j = 0; j < headers.length; j++) {
+        rowData[headers[j].trim()] = row[j].trim();
+      }
+    
+      data.push(rowData);
+    }
+    
+    const dataFromClipboard = JSON.stringify(data);
+    //console.log(data);
+    start(data)
+    
+  })
+  .catch(err => {
+    console.error('Помилка отримання даних з буфера обміну: ', err);
+  });
+//[END] Отримання даних з буферу обміну
+
+
+function start(data){
+  //console.clear();
+data.forEach((e) => {
+  //console.log(e)
+  clickAddButton(e);
+});
+}
+
 
 function clickAddButton(lessonData) {
   // Отримуємо елемент посилання за допомогою тексту
