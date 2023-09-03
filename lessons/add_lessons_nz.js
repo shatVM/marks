@@ -21,7 +21,9 @@ navigator.clipboard.readText()
     }
     
     const dataFromClipboard = JSON.stringify(data);
-    //console.log(data);
+    console.log(data);
+    console.log("-----------");
+    //console.log(dataFromClipboard);
     start(data)
     
   })
@@ -71,7 +73,7 @@ function addLessons(lessonData) {
   lesson_date.value = lessonData.date;
 
   var buzzer_id = document.getElementById("osvitaschedulereal-buzzer_id");
-  buzzer_id.value = "868859" + lessonData.buzzer; //може змінюватись у різних користувачів, потрібно перевіряти
+  buzzer_id.value = "892182" + lessonData.buzzer; //може змінюватись у різних користувачів, потрібно перевіряти
 
   var room_id = document.getElementById("osvitaschedulereal-room_id");
   room_id.value = lessonData.room;
