@@ -12,7 +12,7 @@ setTimeout(function () {
 
     const buttons = document.querySelectorAll("button");
 
-    buttons[4].click();
+    buttons[5].click();
   }, 500);
 }, 500);
 
